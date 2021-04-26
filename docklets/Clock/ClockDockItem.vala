@@ -95,7 +95,7 @@ namespace Docky
 			
 			var now = new DateTime.now_local ();
 			if (prefs.ShowMilitary)
-				Text = now.format ("%a, %b %d %H:%M");
+				Text = now.format ("%b日 %H:%M  %d ， 周%a");
 			else
 				Text = now.format ("%a, %b %d %I:%M %p");
 			
