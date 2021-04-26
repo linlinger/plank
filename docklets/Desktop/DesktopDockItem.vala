@@ -34,7 +34,7 @@ namespace Docky
 		construct
 		{
 			Icon = "show-desktop;;resource://" + Docky.G_RESOURCE_PATH + "/icons/show-desktop.svg";
-			Text = _("Show Desktop");
+			Text = _("显示桌面");
 		}
 		
 		~DesktopDockItem ()

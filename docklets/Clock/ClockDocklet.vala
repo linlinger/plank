@@ -35,12 +35,12 @@ namespace Docky
 		
 		public unowned string get_name ()
 		{
-			return _("Clock");
+			return _("时钟");
 		}
 		
 		public unowned string get_description ()
 		{
-			return _("What time is it?");
+			return _("不知今夕是何年?");
 		}
 		
 		public unowned string get_icon ()

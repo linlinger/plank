@@ -33,12 +33,12 @@ namespace Docky
 		
 		public unowned string get_name ()
 		{
-			return _("CPU Monitor");
+			return _("性能监视器");
 		}
 		
 		public unowned string get_description ()
 		{
-			return _("Keep an eye on that CPU. And when it gets out of line...");
+			return _("查看当前的CPU和内存的使用量");
 		}
 		
 		public unowned string get_icon ()

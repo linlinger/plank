@@ -36,7 +36,7 @@ namespace Docky
 		construct
 		{
 			Icon = "gnome-applications;;gnome-main-menu";
-			Text = _("Applications");
+			Text = _("所有应用程序");
 
 			apps_menu = new GMenu.Tree ("applications.menu", GMenu.TreeFlags.SORT_DISPLAY_NAME);
 			apps_menu.changed.connect (update_menu);

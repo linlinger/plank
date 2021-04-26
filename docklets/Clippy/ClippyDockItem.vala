@@ -86,7 +86,7 @@ namespace Docky
 		void updated ()
 		{
 			if (clips.size == 0)
-				Text = _("Clipboard is currently empty.");
+				Text = _("剪贴板空空如也……");
 			else if (cur_position == 0 || cur_position > clips.size)
 				Text = get_entry_at (clips.size);
 			else

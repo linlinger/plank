@@ -106,7 +106,7 @@ namespace Docky
 				memory_utilization = 1.0 - (mem_avail / (double) mem_total);
 			}
 			
-			Text = ("CPU: %.1f%% | Mem: %.1f%%").printf (cpu_utilization * 100, memory_utilization * 100);
+			Text = ("CPU用量: %.1f%% | 内存使用量: %.1f%%").printf (cpu_utilization * 100, memory_utilization * 100);
 			
 			// Redrawing the icon is quite expensive so better restrict updates to significant ones
 			if (Math.fabs (last_cpu_utilization - cpu_utilization) >= CPU_THRESHOLD

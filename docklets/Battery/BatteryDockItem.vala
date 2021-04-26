@@ -44,7 +44,7 @@ namespace Docky
 		construct
 		{
 			Icon = "battery-missing";
-			Text = _("No battery");
+			Text = _("无电池");
 			update ();
 
 			timer_id = Gdk.threads_add_timeout (60 * 1000, (SourceFunc) update);
@@ -123,7 +123,7 @@ namespace Docky
 				Text = "%i%%".printf (capacity);
 			} catch {
 				Icon = "battery-missing";
-				Text = _("No battery");
+				Text = _("无电池");
 			}
 
 			return true;

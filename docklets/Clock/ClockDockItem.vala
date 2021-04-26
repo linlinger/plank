@@ -48,7 +48,7 @@ namespace Docky
 			layout.set_ellipsize (Pango.EllipsizeMode.NONE);
 			
 			Icon = "clock";
-			Text = "time";
+			Text = "时间";
 			
 			unowned ClockPreferences prefs = (ClockPreferences) Prefs;
 			prefs.notify["ShowMilitary"].connect (handle_prefs_changed);
@@ -174,7 +174,7 @@ namespace Docky
 				int yOffset = (prefs.ShowDate ? center - spacing : surface.Height - spacing - ampmSize);
 				
 				// draw AM indicator
-				layout.set_text ("am", -1);
+				layout.set_text ("上午", -1);
 				layout.get_pixel_extents (out ink_rect, out logical_rect);
 				cr.move_to ((center - ink_rect.width) / 2, yOffset);
 				Pango.cairo_layout_path (cr, layout);
@@ -191,7 +191,7 @@ namespace Docky
 				cr.fill ();
 				
 				// draw PM indicator
-				layout.set_text ("pm", -1);
+				layout.set_text ("下午", -1);
 				layout.get_pixel_extents (out ink_rect, out logical_rect);
 				cr.move_to (center + (center - ink_rect.width) / 2, yOffset);
 				Pango.cairo_layout_path (cr, layout);
