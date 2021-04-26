@@ -60,7 +60,7 @@ namespace Docky
 				trash_monitor = owned_file.monitor (0);
 				trash_monitor.changed.connect (trash_changed);
 			} catch (Error e) {
-				warning ("Could not start file monitor for trash.");
+				warning ("无法检测回收站文件");
 			}
 			
 			//FIXME Add support for more environments besides GNOME
@@ -89,9 +89,9 @@ namespace Docky
 			// this can be a little costly, let's just call it once and store locally
 			var item_count = get_trash_item_count ();
 			if (item_count == 0U)
-				Text = _("No items in Trash");
+				Text = _("回收站是空的");
 			else
-				Text = ngettext ("%u item in Trash", "%u items in Trash", item_count).printf (item_count);
+				Text = ngettext ("%u 项目在回收站", "%u 项目在回收站", item_count).printf (item_count);
 			
 			Icon = DrawingService.get_icon_from_file (owned_file);
 		}
@@ -101,7 +101,7 @@ namespace Docky
 			try {
 				return owned_file.query_info (FileAttribute.TRASH_ITEM_COUNT, 0, null).get_attribute_uint32 (FileAttribute.TRASH_ITEM_COUNT);
 			} catch (GLib.Error e) {
-				warning ("Could not get item count from trash::item-count.");
+				warning ("无法获取回收站项目数量 trash::item-count.");
 			}
 			
 			return 0U;
@@ -119,7 +119,7 @@ namespace Docky
 		
 		public override string get_drop_text ()
 		{
-			return _("Drop to move to Trash");
+			return _("拖拽至此将项目移动至回收站");
 		}
 		
 		protected override bool can_accept_drop (Gee.ArrayList<string> uris)
@@ -154,7 +154,7 @@ namespace Docky
 			} catch { }
 			
 			if (!trashed)
-				warning ("Could not move '%s' to trash.'", uri);
+				warning ("无法将'%s'移动至回收站 .'", uri);
 			
 			return trashed;
 		}
@@ -199,11 +199,11 @@ namespace Docky
 				warning ("Could not enumerate items in the trash.");
 			}
 			
-			var item = create_menu_item (_("_Open Trash"), Icon);
+			var item = create_menu_item (_("_打开回收站"), Icon);
 			item.activate.connect (open_trash);
 			items.add (item);
 			
-			item = create_menu_item (_("Empty _Trash"), "gtk-clear");
+			item = create_menu_item (_("清空回收站"), "gtk-clear");
 			item.activate.connect (empty_trash);
 			if (get_trash_item_count () == 0U)
 				item.set_sensitive (false);
@@ -219,7 +219,7 @@ namespace Docky
 				unowned string? right_info = right.query_info (FileAttribute.TRASH_DELETION_DATE, 0, null).get_attribute_string (FileAttribute.TRASH_DELETION_DATE);
 				return strcmp (right_info, left_info);
 			} catch (GLib.Error e) {
-				warning ("Could not enumerate items in the trash.");
+				warning ("无法获取回收站内容.");
 				return 0;
 			}
 		}
@@ -233,7 +233,7 @@ namespace Docky
 					f.move (destFile, FileCopyFlags.NOFOLLOW_SYMLINKS | FileCopyFlags.ALL_METADATA | FileCopyFlags.NO_FALLBACK_FOR_MOVE, null, null);
 				}
 			} catch (GLib.Error e) {
-				warning ("Could not restore file from the trash.");
+				warning ("无法从回收站还原文件.");
 			}
 		}
 		
@@ -266,8 +266,8 @@ namespace Docky
 			}
 			
 			var md = new Gtk.MessageDialog (null, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.NONE,
-				"%s", _("Empty all items from Trash?"));
-			md.secondary_text = _("All items in the Trash will be permanently deleted.");
+				"%s", _("是否清空回收站内所有内容"));
+			md.secondary_text = _("回收站内的项目将被永久删除");
 			md.add_button (_("_Cancel"), Gtk.ResponseType.CANCEL);
 			md.add_button (_("Empty _Trash"), Gtk.ResponseType.OK);
 			md.set_default_response (Gtk.ResponseType.OK);
