@@ -97,7 +97,7 @@ namespace Docky
 			if (prefs.ShowMilitary)
 				Text = now.format ("%b日 %H:%M  %d ， 周%a");
 			else
-				Text = now.format ("%a, %b %d %I:%M %p");
+				Text = now.format ("%b日 %H:%M  %d ， 周%a");
 			
 			var size = int.max (surface.Width, surface.Height);
 			if (prefs.ShowDigital)

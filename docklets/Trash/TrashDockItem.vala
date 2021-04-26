@@ -91,7 +91,7 @@ namespace Docky
 			if (item_count == 0U)
 				Text = _("回收站是空的");
 			else
-				Text = ngettext ("%u 项目在回收站", "%u 项目在回收站", item_count).printf (item_count);
+				Text = ngettext ("%u  个项目在回收站", "%u 个项目在回收站", item_count).printf (item_count);
 			
 			Icon = DrawingService.get_icon_from_file (owned_file);
 		}
