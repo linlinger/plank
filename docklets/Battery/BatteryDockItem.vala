@@ -120,7 +120,7 @@ namespace Docky
 				}
 
 				Icon = new_icon;
-				Text = "%i%%".printf (capacity);
+				Text = "当前电量剩余%i%%".printf (capacity);
 			} catch {
 				Icon = "battery-missing";
 				Text = _("无电池");
