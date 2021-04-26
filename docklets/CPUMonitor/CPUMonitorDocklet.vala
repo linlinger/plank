@@ -38,7 +38,7 @@ namespace Docky
 		
 		public unowned string get_description ()
 		{
-			return _("查看当前的CPU和内存的使用量");
+			return _("查看当前的CPU和内存的使用百分比");
 		}
 		
 		public unowned string get_icon ()
