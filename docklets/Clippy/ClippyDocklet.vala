@@ -33,12 +33,12 @@ namespace Docky
 		
 		public unowned string get_name ()
 		{
-			return _("Clippy");
+			return _("剪贴板管理器");
 		}
 		
 		public unowned string get_description ()
 		{
-			return _("Keep recent clipboard entries.");
+			return _("最近粘贴的内容都在此处");
 		}
 		
 		public unowned string get_icon ()

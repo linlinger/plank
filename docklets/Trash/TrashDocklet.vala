@@ -33,12 +33,12 @@ namespace Docky
 		
 		public unowned string get_name ()
 		{
-			return _("Trash");
+			return _("回收站");
 		}
 		
 		public unowned string get_description ()
 		{
-			return _("Have a look at your trash!");
+			return _("回收站");
 		}
 		
 		public unowned string get_icon ()

@@ -33,12 +33,12 @@ namespace Docky
 
 		public unowned string get_name ()
 		{
-			return _("Battery");
+			return _("电池");
 		}
 
 		public unowned string get_description ()
 		{
-			return _("Displays battery information");
+			return _("显示电池信息");
 		}
 
 		public unowned string get_icon ()

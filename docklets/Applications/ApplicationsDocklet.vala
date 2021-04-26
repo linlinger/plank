@@ -31,12 +31,12 @@ namespace Docky
 
 		public unowned string get_name ()
 		{
-			return _("Applications");
+			return _("所有应用程序");
 		}
 
 		public unowned string get_description ()
 		{
-			return "Simply start any of your applications.";
+			return "轻松惬意的打开你的应用程序";
 		}
 
 		public unowned string get_icon ()

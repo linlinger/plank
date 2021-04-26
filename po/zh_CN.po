@@ -128,7 +128,7 @@ msgstr "避开活动窗口"
 
 #: ../data/ui/preferences.ui.h:23
 msgid "Hide Dock"
-msgstr "影藏Dock"
+msgstr "隐藏Dock"
 
 #: ../data/ui/preferences.ui.h:24
 msgid "Hide Delay:"

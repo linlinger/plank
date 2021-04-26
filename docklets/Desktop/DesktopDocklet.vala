@@ -35,12 +35,12 @@ namespace Docky
 		
 		public unowned string get_name ()
 		{
-			return _("Desktop");
+			return _("桌面");
 		}
 		
 		public unowned string get_description ()
 		{
-			return _("Show your Desktop.");
+			return _("显示桌面.");
 		}
 		
 		public unowned string get_icon ()
