@@ -78,3 +78,4 @@ data/net.launchpad.plank.gschema.valid
 data/net.launchpad.plank.gschema.xml
 data/net.launchpad.plank.gschema.xml.in
 data/plank.desktop
+.DS_Store
