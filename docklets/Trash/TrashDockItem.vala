@@ -53,7 +53,7 @@ namespace Docky
 		
 		construct
 		{
-			owned_file = File.new_for_uri ("trash://");
+			owned_file = File.new_for_uri ("trash:///");
 			update ();
 			
 			try {
