@@ -241,7 +241,7 @@ namespace Docky
 		void open_trash ()
 		{
 			exo_open_folder(trash://);
-			#System.get_default ().open (owned_file);
+			//System.get_default ().open (owned_file);
 		}
 		
 		void empty_trash ()
