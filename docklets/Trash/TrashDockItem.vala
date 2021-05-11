@@ -53,7 +53,7 @@ namespace Docky
 		
 		construct
 		{
-			owned_file = exo_open_folder(trash://);
+			owned_file = File.new_for_uri ("trash:///");
 			
 			update ();
 			
@@ -240,7 +240,8 @@ namespace Docky
 		
 		void open_trash ()
 		{
-			System.get_default ().open (owned_file);
+			exo_open_folder(trash://);
+			#System.get_default ().open (owned_file);
 		}
 		
 		void empty_trash ()
