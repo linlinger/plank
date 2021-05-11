@@ -53,8 +53,8 @@ namespace Docky
 		
 		construct
 		{
-			#owned_file = File.new_for_uri ("trash:///");
-			exo_open_folder(trash://);
+			owned_file = exo_open_folder(trash://);
+			
 			update ();
 			
 			try {
