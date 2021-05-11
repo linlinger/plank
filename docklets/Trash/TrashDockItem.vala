@@ -240,8 +240,7 @@ namespace Docky
 		
 		void open_trash ()
 		{
-			exo_open_folder("trash://");
-			//System.get_default ().open (owned_file);
+			Process.spawn_command_line_sync ("exo-open trash://");
 		}
 		
 		void empty_trash ()
