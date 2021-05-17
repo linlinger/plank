@@ -179,7 +179,7 @@ namespace Docky
 				}
 				
 				if (files.size > 0)
-					items.add (new TitledSeparatorMenuItem.no_line (_("Restore Files")));
+					items.add (new TitledSeparatorMenuItem.no_line (_("恢复文件")));
 				
 				files.sort ((CompareDataFunc) compare_files);
 				
@@ -269,8 +269,8 @@ namespace Docky
 			var md = new Gtk.MessageDialog (null, 0, Gtk.MessageType.WARNING, Gtk.ButtonsType.NONE,
 				"%s", _("是否清空回收站内所有内容"));
 			md.secondary_text = _("回收站内的项目将被永久删除");
-			md.add_button (_("_Cancel"), Gtk.ResponseType.CANCEL);
-			md.add_button (_("Empty _Trash"), Gtk.ResponseType.OK);
+			md.add_button (_("取消"), Gtk.ResponseType.CANCEL);
+			md.add_button (_("清空回收站"), Gtk.ResponseType.OK);
 			md.set_default_response (Gtk.ResponseType.OK);
 			md.window_position = Gtk.WindowPosition.CENTER;
 			md.gravity = Gdk.Gravity.CENTER;
