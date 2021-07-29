@@ -660,18 +660,18 @@ namespace Plank
 							}
 							
 							// check for OnlyShowIn
-							if (file.has_key (group, KeyFileDesktop.KEY_ONLY_SHOW_IN)) {
-								var found = false;
-								
-								foreach (unowned string s in file.get_string_list (group, KeyFileDesktop.KEY_ONLY_SHOW_IN))
-									if (s == UNITY_QUICKLISTS_TARGET_VALUE || s == "Plank") {
-										found = true;
-										break;
-									}
-								
-								if (!found)
-									continue;
-							}
+							//if (file.has_key (group, KeyFileDesktop.KEY_ONLY_SHOW_IN)) {
+							//	var found = false;
+							//	
+							//	foreach (unowned string s in file.get_string_list (group, KeyFileDesktop.KEY_ONLY_SHOW_IN))
+							//		if (s == UNITY_QUICKLISTS_TARGET_VALUE || s == "Plank") {
+							//			found = true;
+							//			break;
+							//		}
+							//	
+							//	if (!found)
+							//		continue;
+							//}
 							
 							var action_name = file.get_locale_string (group, KeyFileDesktop.KEY_NAME);
 							
