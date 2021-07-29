@@ -671,7 +671,7 @@ namespace Plank
 								
 								//if (!found)
 								//	continue;
-							//}
+							}
 							
 							var action_name = file.get_locale_string (group, KeyFileDesktop.KEY_NAME);
 							
