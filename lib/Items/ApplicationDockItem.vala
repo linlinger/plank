@@ -479,7 +479,7 @@ namespace Plank
 					
 					items.add (window_item);
 					//For debug purpose showing window item
-					warning(window item);
+					warning("Window item activated");
 				}
 			}
 			
