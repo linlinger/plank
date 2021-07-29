@@ -679,7 +679,7 @@ namespace Plank
 			var draw_value = draw_values[item];
 			if (draw_value == null) {
 				warning ("Without a draw_value there is trouble ahead for '%s'", item.Text);
-				draw_value = new DockItemDrawValue ();
+				//draw_value = new DockItemDrawValue ();
 			}
 			
 			return draw_value;
