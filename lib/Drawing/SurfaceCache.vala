@@ -192,11 +192,11 @@ namespace Plank
 			// FIXME There is probably a nicer way to accomplish this
 			// Mark the created surface if drawing-time exceeded our limit and have
 			// an upper drawing-layer (e.g. DockRenderer) handle it
-			//if (time_elapsed >= INSANE_DRAWING_TIME && flags == SurfaceCacheFlags.NONE) {
-			//	warning ("Creating surface took WAY TOO LONG (%" + int64.FORMAT + "ms), enabled downscaling for this cache!", time_elapsed / 1000);
-			//	flags = SurfaceCacheFlags.ALLOW_DOWNSCALE;
-			//	surface.set_qdata<string> (quark_surface_stats, SURFACE_STATS_DRAWING_TIME_EXCEEDED);
-			//}
+			if (time_elapsed >= INSANE_DRAWING_TIME && flags == SurfaceCacheFlags.NONE) {
+				warning ("Creating surface took WAY TOO LONG (%" + int64.FORMAT + "ms), enabled downscaling for this cache!", time_elapsed / 1000);
+				flags = SurfaceCacheFlags.ALLOW_DOWNSCALE;
+				surface.set_qdata<string> (quark_surface_stats, SURFACE_STATS_DRAWING_TIME_EXCEEDED);
+			}
 			
 			current_info = new SurfaceInfo ((uint16) width, (uint16) height, finish_time, time_elapsed);
 			current_info.access_count++;

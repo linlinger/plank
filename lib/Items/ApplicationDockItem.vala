@@ -478,6 +478,8 @@ namespace Plank
 						window_item.activate.connect (() => WindowControl.focus_window (window, event_time));
 					
 					items.add (window_item);
+					//For debug purpose showing window item
+					warning(window item);
 				}
 			}
 			
